@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <style>
+       h1{
+        font-family:'Courier New', Courier, monospace;
+        transform: translateY(270px);
+        
+       }
+       .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .happy{
+            display:block;
+            margin-top: -200px;
+            margin-left: 41%;
+            font-family:'Courier New', Courier, monospace;
+            background-color: rgb(14, 176, 14);
+ 
+        }
+        .sad{
+            display:block;
+            margin-top: -21px;
+            margin-left: 44%;
+           
+            font-family:'Courier New', Courier, monospace;
+            background-color: rgb(222, 15, 15);
+  
+        }
+    </style>
+    <head>  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Valentine</title>
+    </head>
+    <body>
+        <h1 align="center" >
+            Will you be my Valentine? 
+        </h1>
+
+        <div class="image">
+               <img src="panda.gif" height="250" width="250" id="cute">
+        </div>
+
+        <audio id="slapsound" >
+            <source src="slapp.mp3" >
+            
+        </audio>
+        
+        <audio id="happysound" src="happyhappy.mp3">
+        </audio>
+       
+
+        <button class="happy" onclick="docute(),dohappy()">
+            <b>YES</b>
+        </button> 
+        <button class="sad" onclick="dosad();doslap()"  >
+            <b>NO, because im a bitchy little bibit</b>
+        </button>
+        
+    </body>
+
+    <script>
+        function doslap(){
+           
+            var audio = document.getElementById("slapsound");
+            audio.play();
+        }
+        function dohappy(){
+           
+            var audio = document.getElementById("happysound");
+            audio.play();
+          
+
+        }
+
+        function docute(){
+         var img=document.getElementById ("cute");
+         img.src="happy.gif";
+        }
+
+        function dosad(){
+         var img=document.getElementById ("cute");
+         img.src="badbubu.gif";
+        }
+    </script>
+</html>
